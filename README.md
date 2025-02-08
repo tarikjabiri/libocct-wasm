@@ -12,23 +12,19 @@ The `libocct-wasm` is a WebAssembly (WASM) version of the OpenCASCADE Technology
 Before building the OpenCASCADE wasm library, ensure you have the following installed:
 - [cmake](https://cmake.org/download/) (version 3.30 or higher)
 - [npm](https://docs.npmjs.com/cli/v11/commands/npm)
-- [pnpm](https://pnpm.io/)
 - [node](https://nodejs.org/)
 - [ninja](https://ninja-build.org/)
 - [git](https://git-scm.com/)
 
 ## Build Instructions
-1. Install the dependencies
+
+1. Run the setup script
 ```sh
-pnpm install
+chmod +x ./scripts/setup.sh
+./scripts/setup.sh
 ```
 
-2. Run the setup script
+2. Build the wasm library
 ```sh
-pnpm run setup
-```
-
-3. Build the wasm library
-```sh
-pnpm run build
+cmake --preset Release && cmake --build --preset Release
 ```
