@@ -1,6 +1,6 @@
-# libocct
+# libocct-wasm
 
-The libocct is a WebAssembly (WASM) version of the OpenCASCADE Technology (OCCT) library.
+The `libocct-wasm` is a WebAssembly (WASM) version of the OpenCASCADE Technology (OCCT) library.
 
 > [!NOTE]
 > Used to make building OCCT wasm modules faster.
