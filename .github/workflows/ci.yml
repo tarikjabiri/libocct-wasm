@@ -13,6 +13,8 @@ jobs:
       - uses: pnpm/action-setup@v4
         with:
           version: 10.2.0
+      - run: pip3 install wheel setuptools
+      - run: pip3 install ninja --upgrade
       - run: pnpm install
       - run: pnpm run setup
       - run: pnpm run build
