@@ -1,0 +1,33 @@
+{
+  "$schema": "https://cmake.org/cmake/help/latest/_downloads/3e2d73bff478d88a7de0de736ba5e361/schema.json",
+  "version": 10,
+  "cmakeMinimumRequired": {
+    "major": 3,
+    "minor": 30,
+    "patch": 0
+  },
+  "configurePresets": [
+    {
+      "name": "Default",
+      "generator": "Ninja",
+      "toolchainFile": "./build/emsdk/upstream/emscripten/cmake/Modules/Platform/Emscripten.cmake",
+      "hidden": true
+    },
+    {
+      "name": "Release",
+      "inherits": "Default",
+      "binaryDir": "./build/Release",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Release"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "Release",
+      "configurePreset": "Release",
+      "configuration": "Release",
+      "targets": ["install"]
+    }
+  ]
+}
