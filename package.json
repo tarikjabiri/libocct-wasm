@@ -2,7 +2,8 @@
   "type": "module",
   "scripts": {
     "setup": "node setup.ts",
-    "build": "cmake --preset Release && cmake --build --preset Release"
+    "build": "cmake --preset Release && cmake --build --preset Release",
+    "zip": "zip -r libocct-wasm.zip ./libocct-wasm/"
   },
   "devDependencies": {
     "@types/node": "^22.13.1",
