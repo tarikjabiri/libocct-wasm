@@ -41,8 +41,20 @@ foreach(PACKAGE ${OCCT_PACKAGES})
   if(NOT PACKAGE STREQUAL "")
     list(APPEND OCCT_SRC_GLOB build/occt/src/${PACKAGE}/*.cxx)
     list(APPEND OCCT_INCLUDE_GLOB build/occt/src/${PACKAGE}/*.hxx)
+    list(APPEND OCCT_INCLUDE_GLOB build/occt/src/${PACKAGE}/*.lxx)
     list(APPEND OCCT_INCLUDE build/occt/src/${PACKAGE})
   endif()
+endforeach()
+
+set(OCCT_FOLDERS
+  Standard
+)
+
+foreach(FOLDER ${OCCT_FOLDERS})
+  list(APPEND OCCT_SRC_GLOB build/occt/src/${FOLDER}/*.cxx)
+  list(APPEND OCCT_INCLUDE_GLOB build/occt/src/${FOLDER}/*.hxx)
+  list(APPEND OCCT_INCLUDE_GLOB build/occt/src/${FOLDER}/*.lxx)
+  list(APPEND OCCT_INCLUDE build/occt/src/${FOLDER})
 endforeach()
 
 file(GLOB OCCT_SRC ${OCCT_SRC_GLOB})
